@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/generatorFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.generator.GeneratorFragment"
+        android:label="AI Generator"
+        tools:layout="@layout/fragment_generator" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_wardrobe"
+            app:destination="@id/wardrobeFragment" />
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settingsPrivacyFragment" />
+        <action
+            android:id="@+id/action_profile_to_liked"
+            app:destination="@id/likedPostsFragment" />
+        <action
+            android:id="@+id/action_profile_to_saved"
+            app:destination="@id/savedPostsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wardrobeFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.WardrobeFragment"
+        android:label="My Wardrobe"
+        tools:layout="@layout/fragment_wardrobe" />
+
+    <fragment
+        android:id="@+id/settingsPrivacyFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.SettingsPrivacyFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings_privacy" />
+
+    <fragment
+        android:id="@+id/likedPostsFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.LikedPostsFragment"
+        android:label="Liked Posts"
+        tools:layout="@layout/fragment_liked_posts" />
+
+    <fragment
+        android:id="@+id/savedPostsFragment"
+        android:name="com.example.uas_mobile_programming_1.ui.fragments.SavedPostsFragment"
+        android:label="Saved Posts"
+        tools:layout="@layout/fragment_saved_posts" />
+
+</navigation>
